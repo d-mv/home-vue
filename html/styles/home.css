@@ -1,0 +1,30 @@
+.home-message {
+  position: absolute;
+  top: 38px;
+  left: 170px;
+  height: 600px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.home-photo {
+  background: url('https://res.cloudinary.com/diciu4xpu/image/upload/v1551731141/home/avatar_photo.jpg');
+  -webkit-filter: sepia(0.5);
+  filter: sepia(0.5);
+  background-color: white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  height: 600px;
+  width: 350px;
+  border-radius: 3px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
