@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { EventBus } from '../event-bus.js'
+import { EventBus } from '../../event-bus.js'
 import { mapGetters } from 'vuex';
 import PhotoCard from './PhotoCard'
 
