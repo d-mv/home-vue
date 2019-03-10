@@ -5,14 +5,12 @@
         <div class='first-line t0'>WELCOME,</div>
         <div class='second-line t1'>I'm Dmitry</div>
         <div class='third-line t2'>FULL-STACK DEVELOPER</div>
-        <div class='fourth-line'>{send message}</div>
+        <!-- <div class='fourth-line'>{send message}</div> -->
       </div>
-      <!-- <div class='home-photo'> -->
       <img
         class='home-photo'
-        src="https://res.cloudinary.com/diciu4xpu/image/upload/v1552051743/home/avatar_photo.jpg"
+        src="https://res.cloudinary.com/diciu4xpu/image/upload/v1552251001/home/avatar_photo.jpg"
       >
-      <!-- </div> -->
     </div>
   </section>
 </template>
@@ -38,7 +36,6 @@ export default {}
     align-self: center;
     grid-area: photo;
     width: 100vw;
-    filter: sepia(0.5);
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   }
 }
@@ -61,9 +58,9 @@ export default {}
     align-self: center;
     grid-area: photo;
     width: 20rem;
-    filter: sepia(0.5);
     border-radius: 3px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+    animation: 1s ease-out 0s 1 growLarge;
   }
 }
 @media (min-width: 700px) {
@@ -92,9 +89,9 @@ export default {}
     align-self: center;
     grid-area: photo;
     width: 20rem;
-    filter: sepia(0.5);
     border-radius: 3px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+    animation: 1s ease-out 0s 1 growLarge;
   }
 }
 </style>
