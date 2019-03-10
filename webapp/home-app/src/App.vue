@@ -28,7 +28,7 @@ export default {
     HomePage,
     WebProjects,
     Photos,
-    Contacts
+    Contacts,
   },
   mounted () {
     EventBus.$on('show', content => {
