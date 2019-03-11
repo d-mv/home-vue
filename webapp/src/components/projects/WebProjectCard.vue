@@ -63,14 +63,13 @@ export default {
         default:
           url = this.project.links.other
       }
-      if (url != '') {window.open(url, '_blank').focus()}
+      if (url != '') { window.open(url, '_blank').focus() }
     }
   }}
 </script>
 
 <style lang="scss" scoped>
-@media (max-width: 499px) {
-  .web-project-card {
+.web-project-card {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
@@ -134,71 +133,5 @@ export default {
     color: black;
   }
 }
-}
-@media (min-width: 500px) {
-  .web-project-card {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas: "photo" "links";
-  grid-column-gap: 1rem;
-  border-radius: 3px;
-  transition-duration: 0.5s;
-  width: 300px;
-  height: 280px;
-  margin: 10px;
-  background-color: #ececec;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
-}
-.web-project-photo {
-  grid-area: photo;
-  background-color: white;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  object-fit: cover;
-  height: 250px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-content: flex-end;
-  border-radius: 3px 3px 0 0;
-}
-
-.web-project-title-block {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 5px 0;
-  border-bottom: 2px solid grey;
-}
-.web-project-title,
-.web-project-description {
-  padding: 5px 10px;
-  font-weight: 300;
-}
-.web-project-title {
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-.web-project-description {
-  font-size: 1rem;
-  font-style: italic;
-}
-
-.web-project-links {
-  grid-area: links;
-  display: flex;
-  justify-content: space-around;
-}
-.web-project-link {
-  font-size: 0.8rem;
-  font-style: italic;
-  color: #878787;
-  &:hover {
-    color: black;
-  }
-}}
 </style>
 

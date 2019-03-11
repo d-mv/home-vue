@@ -5,7 +5,10 @@
         <div class='first-line t0'>WELCOME,</div>
         <div class='second-line t1'>I'm Dmitry</div>
         <div class='third-line t2'>FULL-STACK DEVELOPER</div>
-        <!-- <div class='fourth-line'>{send message}</div> -->
+        <div
+          class='fourth-line'
+          @click='sendMessage ()'
+        >{ send message }</div>
       </div>
       <img
         class='home-photo'
@@ -16,10 +19,29 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    sendMessage () {
+      const messageDetails = {
+        email: 'd.dash.mv@gmail.com',
+        subj: 'From your web-site',
+        body: 'Hi Dmitry,'
+      };
+      const sendMessage = `mailto:${messageDetails.email}?subject=${messageDetails.subj}&body=${messageDetails.body}`
+      window.location.href = sendMessage
+    }
+  }
+}
 </script>
 
 <style lang='scss' scoped>
+.fourth-line{
+  margin: 10px 0;
+  color: #878787;
+  &:hover{
+    color: black;
+  }
+}
 @media (max-width: 350px) {
   .home-wrapper {
     display: flex;

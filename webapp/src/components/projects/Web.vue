@@ -39,6 +39,9 @@ export default {
   justify-content: center;
   align-content: center;
 }
+.web-project-card {
+  animation: 1s ease-out 0s 1 growLarge;
+}
 @media (max-width: 499px) {
 .web-content {
   left: 0;
@@ -50,8 +53,5 @@ export default {
   left: 170px;
   right: 20px;
 }
-}
-.web-project-card {
-  animation: 1s ease-out 0s 1 growLarge;
 }
 </style>
