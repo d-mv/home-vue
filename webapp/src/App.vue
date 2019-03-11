@@ -12,7 +12,7 @@
 import { EventBus } from './event-bus.js'
 import NavBar from './components/NavBar.vue'
 import HomePage from './components/HomePage.vue'
-import WebProjects from './components/WebProjects.vue'
+import WebProjects from './components/projects/Web'
 import Photos from './components/photos/Photos'
 import Contacts from './components/Contacts.vue'
 

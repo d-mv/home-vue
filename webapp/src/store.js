@@ -6,13 +6,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    photos: json.photos
+    photos: json.photos,
+    projects: json.projects
   },
   mutations: {
   },
   actions: {
   },
   getters: {
-    photos: state => state.photos
+    photos: state => state.photos,
+    projects: state => state.projects
   }
 })
