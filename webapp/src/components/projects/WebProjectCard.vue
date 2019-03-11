@@ -9,6 +9,11 @@
         <div class="web-project-description">{{this.project.description}}</div>
       </div>
     </div>
+    <div class='web-project-details t6'>
+
+        {{this.project.details}}
+
+    </div>
     <div class="web-project-links">
       <div
         class='web-project-link'
@@ -18,7 +23,7 @@
         class='web-project-link'
         @click='goLink ("deploy")'
         v-if='this.project.links.deploy != ""'
-      >heroku</div>
+      >deployed</div>
       <div
         class='web-project-link'
         @click='goLink ("video")'
@@ -72,13 +77,13 @@ export default {
 .web-project-card {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas: "photo" "links";
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "photo" "details" "links";
   grid-column-gap: 1rem;
   border-radius: 3px;
   transition-duration: 0.5s;
   width: 300px;
-  height: 280px;
+  // height: 380px;
   margin: 10px;
   background-color: #ececec;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
@@ -119,11 +124,16 @@ export default {
   font-size: 1rem;
   font-style: italic;
 }
+.web-project-details{
+  grid-area: details;
+  padding: 10px;
+}
 
 .web-project-links {
   grid-area: links;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 10px;
 }
 .web-project-link {
   font-size: 0.8rem;
