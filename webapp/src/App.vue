@@ -40,7 +40,6 @@ export default {
 
 <style>
 @import url('./assets/stylsheets/animations.scss');
-@import url('./assets/stylsheets/colors.scss');
 @import url('./assets/stylsheets/typography.scss');
 @import url('./assets/stylsheets/utility.scss');
 
