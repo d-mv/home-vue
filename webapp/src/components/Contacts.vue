@@ -80,6 +80,7 @@ export default {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   transition-duration: 0.4s;
   cursor: pointer;
+  animation: 1s ease-out 0s 1 growLarge;
   &:hover {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.07);
@@ -89,6 +90,7 @@ export default {
   align-self: center;
   grid-area: description;
   width: 20rem;
+  animation: 1s ease-out 0s 1 growLarge;
 }
 
 .desc {

@@ -89,9 +89,8 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-@media (max-width: 499px) {
-  .photo-main {
-    background-color: white;
+.photo-main {
+   background-color: white;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
@@ -102,11 +101,30 @@ export default {
     flex-direction: column;
     justify-content: flex-end;
     align-content: flex-end;
+     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+     animation: 1s ease-out 0s 1 growLarge;
+}
+.belt{
+  position: absolute;
+   display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    animation: 1s ease-out 0s 1 slideInFromBottom;
+}
+.fas {
+   font-size: 2rem;
+    color: rgba(0, 0, 0, 0.2);
+    align-self: center;
+    padding: 10px;
+}
+@media (max-width: 499px) {
+  .photo-main {
     top: 80px;
     left: 0;
     right: 0;
     height: 60%;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   }
   .belt {
     position: absolute;
@@ -114,58 +132,23 @@ export default {
     right: 0px;
     bottom: 10%;
     height: 15%;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-  }
-  .fas {
-    font-size: 2rem;
-    color: rgba(0, 0, 0, 0.2);
-    align-self: center;
-    padding: 10px;
-    transition-duration: 0.7s;
   }
 }
 @media (min-width: 500px) {
   .photo-main {
-    background-color: white;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-    object-fit: cover;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-content: flex-end;
     top: 38px;
     width: 80%;
     right: 40px;
     bottom: 150px;
     border-radius: 3px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   }
   .belt {
-    position: absolute;
     width:80%;
     right: 40px;
     bottom: 20px;
     height: 110px;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
   }
   .fas {
-    font-size: 2rem;
-    color: rgba(0, 0, 0, 0.2);
-    align-self: center;
-    padding: 10px;
-    transition-duration: 0.7s;
     &:hover {
       transform: scale(1.2);
       text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);

@@ -22,12 +22,15 @@
 export default {
   methods: {
     sendMessage () {
+      // set  details
       const messageDetails = {
         email: 'd.dash.mv@gmail.com',
         subj: 'From your web-site',
         body: 'Hi Dmitry,'
       };
+      // from url
       const sendMessage = `mailto:${messageDetails.email}?subject=${messageDetails.subj}&body=${messageDetails.body}`
+      // open default mail client
       window.location.href = sendMessage
     }
   }
