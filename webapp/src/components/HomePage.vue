@@ -5,6 +5,7 @@
         <div class='first-line t0'>WELCOME,</div>
         <div class='second-line t1'>I'm Dmitry</div>
         <div class='third-line t2'>FULL-STACK DEVELOPER</div>
+        <div class='third-line t6'>Ruby, Rails, Vue.js & etc. Learning something new and make photos when free.</div>
         <div
           class='fourth-line'
           @click='sendMessage ()'
@@ -38,6 +39,9 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+.third-line{
+  margin-bottom: 5px;
+}
 .fourth-line{
   margin: 10px 0;
   color: #878787;
