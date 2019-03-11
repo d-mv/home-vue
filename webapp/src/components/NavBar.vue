@@ -48,7 +48,7 @@ export default {
       screenSmall: false
     }
   },
-  mounted () {
+  beforeMount () {
     if (window.screen.width < 500) {
       this.showNavBar = false
       this.screenSmall = true

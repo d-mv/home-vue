@@ -17,7 +17,7 @@ export default {
       required: true
     }
   },
-    computed: {
+  computed: {
     ...mapGetters([
       'photos',
     ])
@@ -41,12 +41,11 @@ export default {
   width: 20%;
   height: 100%;
   transition-duration: 0.5s;
-}
-
-.belt-card:hover {
-  transform: scale(1.1);
-  margin: 0 20px;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  &:hover {
+    transform: scale(1.1);
+    margin: 0 20px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  }
 }
 </style>
 
