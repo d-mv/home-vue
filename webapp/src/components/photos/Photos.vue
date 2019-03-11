@@ -71,7 +71,6 @@ export default {
   },
   methods: {
     switchPhoto (position) {
-      console.log(`method run with ${position}`)
       this.chosenPhoto = position
       return this.mainPhoto
     },
