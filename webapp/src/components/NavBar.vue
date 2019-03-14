@@ -110,14 +110,13 @@ export default {
     padding: 10px 20px;
     margin-top: 30px;
     transform: rotate(-90deg);
-    transition-duration: 1s;
+    transition: 1s;
     font-size: 20px;
     text-align: center;
     width: 120px;
     &:hover {
       transform: none;
       padding: 30px 20px 30px 80px;
-      // font-size: 26px;
       background-color: rgba(255, 255, 255, 0.9);
     }
   }

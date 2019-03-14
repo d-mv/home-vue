@@ -40,10 +40,9 @@ export default {
   border-radius: 3px;
   width: 20%;
   height: 100%;
-  transition-duration: 0.5s;
+  transition: 1s;
   &:hover {
-    transform: scale(1.1);
-    margin: 0 20px;
+    transform: scale(1.05);
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   }
 }
