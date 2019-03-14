@@ -89,34 +89,36 @@ export default {
 
 <style lang='scss' scoped>
 .photo-main {
-   background-color: white;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-    object-fit: cover;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-content: flex-end;
-     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-     animation: 1s ease-out 0s 1 growLarge;
-}
-.belt{
+  background-color: white;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  object-fit: cover;
   position: absolute;
-   display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    animation: 1s ease-out 0s 1 slideInFromBottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-end;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  animation: 1s ease-out 0s 1 growLarge;
+  transition: 1s;
+}
+.belt {
+  position: absolute;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+transition: 1s;
 }
 .fas {
-   font-size: 2rem;
-    color: rgba(0, 0, 0, 0.2);
-    align-self: center;
-    padding: 10px;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.2);
+  align-self: center;
+  padding: 10px;
 }
 @media (max-width: 499px) {
   .photo-main {
@@ -142,7 +144,7 @@ export default {
     border-radius: 3px;
   }
   .belt {
-    width:80%;
+    width: 80%;
     right: 40px;
     bottom: 20px;
     height: 110px;
