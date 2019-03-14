@@ -7,7 +7,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     photos: json.photos,
-    projects: json.projects
+    projects: json.projects,
+    technology: json.technology
   },
   mutations: {
   },
@@ -15,6 +16,7 @@ export default new Vuex.Store({
   },
   getters: {
     photos: state => state.photos,
-    projects: state => state.projects
+    projects: state => state.projects,
+    technology: state => state.technology
   }
 })

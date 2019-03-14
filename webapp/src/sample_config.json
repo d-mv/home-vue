@@ -1,0 +1,34 @@
+{
+  "photos": {
+    "1": {
+      "title": "",
+      "location": "",
+      "large": "",
+      "thumb": ""
+    }
+  },
+  "projects": {
+    "1": {
+      "title": "",
+      "description": "",
+      "photo": "",
+      "details": "",
+      "technology": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "links": {
+        "github": "",
+        "deploy": "",
+        "video": "",
+        "other": ""
+      }
+    }
+  },
+  "technology": {
+    "name": ["link","copyright"]
+  }
+}

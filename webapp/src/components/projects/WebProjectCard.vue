@@ -10,9 +10,18 @@
       </div>
     </div>
     <div class='web-project-details t6'>
-
-        {{this.project.details}}
-
+      {{this.project.details}}
+    </div>
+    <div class="web-project-tech-logos">
+      <div
+        v-for="value in getTechLinks(this.project.technology)"
+        :key='value[0]'
+      >
+        <WebProjectTechLogo
+          :link='value[0]'
+          class='web-project-tech-links'
+        />
+      </div>
     </div>
     <div class="web-project-links">
       <div
@@ -40,7 +49,13 @@
 
 <script>
 import { mapGetters } from 'vuex';
+
+import WebProjectTechLogo from './WebProjectTechLogo'
+
 export default {
+  components: {
+    WebProjectTechLogo
+  },
   props: {
     project: {
       type: Object,
@@ -49,8 +64,8 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'projects',
-    ])
+      'technology',
+    ]),
   },
   methods: {
     goLink (target) {
@@ -69,6 +84,18 @@ export default {
           url = this.project.links.other
       }
       if (url != '') { window.open(url, '_blank').focus() }
+    },
+    getTechLinks (links) {
+      const linksArray = []
+      if (typeof links !== 'undefined') {
+        links.forEach((link) => {
+          linksArray.push(this.technology[link])
+        })
+      }
+      return linksArray
+    },
+    cons (smth) {
+      console.log(smth)
     }
   }}
 </script>
@@ -78,12 +105,11 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "photo" "details" "links";
+  grid-template-areas: "photo" "details" "logos" "links";
   grid-column-gap: 1rem;
   border-radius: 3px;
   transition-duration: 0.5s;
   width: 300px;
-  // height: 380px;
   margin: 10px;
   background-color: #ececec;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
@@ -124,7 +150,7 @@ export default {
   font-size: 1rem;
   font-style: italic;
 }
-.web-project-details{
+.web-project-details {
   grid-area: details;
   padding: 10px;
 }
@@ -142,6 +168,14 @@ export default {
   &:hover {
     color: black;
   }
+}
+.web-project-tech-logos{
+  grid-area: logos;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-content: center;
+  padding: 10px 5px;
 }
 </style>
 
