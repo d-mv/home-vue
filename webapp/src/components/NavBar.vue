@@ -117,7 +117,7 @@ export default {
     &:hover {
       transform: none;
       padding: 30px 20px 30px 80px;
-      font-size: 26px;
+      // font-size: 26px;
       background-color: rgba(255, 255, 255, 0.9);
     }
   }
