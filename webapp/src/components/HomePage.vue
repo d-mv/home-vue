@@ -39,13 +39,13 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-.third-line{
+.third-line {
   margin-bottom: 5px;
 }
-.fourth-line{
+.fourth-line {
   margin: 10px 0;
   color: #878787;
-  &:hover{
+  &:hover {
     color: black;
   }
 }
